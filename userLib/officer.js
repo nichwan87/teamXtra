@@ -8,7 +8,7 @@ GITHUB
 
 const Employee = require('./employee.js');
 
-class Manager extends Employee {
+class Officer extends Employee {
     constructor(id, name, email, gitHub, role) {
         super(id, name, email, role)
         this.gitHub = gitHub;
@@ -17,4 +17,4 @@ class Manager extends Employee {
         return this.gitHub;
     }
 }
-module.exports = Manager;
+module.exports = Officer;
