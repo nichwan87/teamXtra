@@ -228,5 +228,23 @@ function getDets() {
                 team.push(someEmployee);
                 addMore()
             }
+        function addMore() {
+            inquirer.prompt([{
+                type: 'confirm',
+                name: 'addNew',
+                message: 'Add another employee?'
+            }])
+        .then(res => {
+            if(res.addNew === true){
+                getInfo(team)
+            }
+            else {
+                let theCardHTML = generatePage(team)
+                writeHTML(theCardHTML)
+            }
+        })
+
+    }
 })
+
 }
