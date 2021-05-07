@@ -69,7 +69,7 @@ function getDets() {
         {
         type: 'list',
         name: 'role',
-        message: "Employees' Role"
+        message: "Employees' Role",
         choices: ["Casual", "Engineer", "Executive", "Intern", "Manager", "Officer", "Operations"]
         },
     ])
@@ -81,7 +81,7 @@ function getDets() {
             {
                 type: 'input',
                 name: 'gitHub',
-                message: "Casual's GitHub Account"
+                message: "Casual's GitHub Account",
                 validate: gitInput => {
                     if (gitInput) {
                         return true;
@@ -102,7 +102,7 @@ function getDets() {
             {
                 type: 'input',
                 name: 'gitHub',
-                message: "Engineer's GitHub Account"
+                message: "Engineer's GitHub Account",
                 validate: gitInput => {
                     if (gitInput) {
                         return true;
@@ -123,7 +123,7 @@ function getDets() {
                 {
                     type: 'input',
                     name: 'gitHub',
-                    message: "Executive's GitHub Account"
+                    message: "Executive's GitHub Account",
                     validate: gitInput => {
                         if (gitInput) {
                             return true;
@@ -144,7 +144,7 @@ function getDets() {
                 {
                     type: 'input',
                     name: 'gitHub',
-                    message: "Intern's GitHub Account"
+                    message: "Intern's GitHub Account",
                     validate: gitInput => {
                         if (gitInput) {
                             return true;
@@ -165,7 +165,7 @@ function getDets() {
                 {
                     type: 'input',
                     name: 'gitHub',
-                    message: "Manager's GitHub Account"
+                    message: "Manager's GitHub Account",
                     validate: gitInput => {
                         if (gitInput) {
                             return true;
@@ -186,7 +186,7 @@ function getDets() {
                 {
                     type: 'input',
                     name: 'gitHub',
-                    message: "Officer's GitHub Account"
+                    message: "Officer's GitHub Account",
                     validate: gitInput => {
                         if (gitInput) {
                             return true;
@@ -207,7 +207,7 @@ function getDets() {
                 {
                     type: 'input',
                     name: 'gitHub',
-                    message: "Operation's GitHub Account"
+                    message: "Operation's GitHub Account",
                     validate: gitInput => {
                         if (gitInput) {
                             return true;
@@ -232,7 +232,7 @@ function getDets() {
             inquirer.prompt([{
                 type: 'confirm',
                 name: 'addNew',
-                message: 'Add another employee?'
+                message: 'Add another employee?',
             }])
         .then(res => {
             if(res.addNew === true){

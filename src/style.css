@@ -1,0 +1,185 @@
+:root {
+    --transition: all 0.6s ease;
+    --black:#000; 
+    --white:#fff;
+    --lightgrey: #f9f9f9;
+    --midgrey:  #dbdbdb;
+    --blue:#87ceeb;
+    --green: rgb(72,225,12);
+    --dkGrey: #333;
+  }
+
+  /*universalSelector*/
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-size: cover;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px var(--midgrey);
+    border-radius: 15px;
+    background-color: var(--blue);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 15px;
+    box-shadow: inset 0 0 3px var(--midgrey);
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+/*Header*/
+  header, .container {
+    text-align: center;
+    margin: 2% 15% auto 15%;
+    background-color: var(--lightgrey);
+    background-size: cover;
+    padding: 2%;
+    border-radius: 20px 5px 3px 5px;
+    height: 200px;
+    opacity: 90%;
+    box-shadow: 5px;   
+  }
+
+  header h1 {
+    margin-top: 2%;
+    font-size: 40px;
+    color: var(--dkGrey);
+  }
+
+  /*body*/
+  .container {
+      height: 400px;
+      margin-top: .2%;
+  }
+
+  #subHead {
+      font-size: 25px;
+      margin: 1% auto 10% auto;
+  }
+
+  #resHead {
+    font-size: 25px;
+    margin: 1% auto 1% auto;
+  }
+  
+  #links {
+    text-align: center;
+    margin: .2% 15% auto 15%;
+    background-color: var(--lightgrey);
+    background-size: cover;
+    padding: 2%;
+    border-radius: 20px 5px 3px 5px;
+    height: 200px;
+    opacity: 90%;
+    box-shadow: 5px;   
+  }
+
+  #viewButton, #bookButton, #homeButton, #submitButton {
+
+    display: inline;
+    border-radius: 5px 20px 5px 8px;
+    border: 1px solid var(--blue);
+    margin: 5% auto auto 2%;
+    padding: 1%;
+    background-color: var(--dkGrey);
+    color: var(--white);
+  }
+
+  #viewButton:hover, #bookButton:hover, #homeButton:hover, #submitButton:hover {
+    transform: rotate(-1deg);
+    cursor: pointer;
+    border: 1px outset var(--green);
+  }
+
+  #viewButton:active, #bookButton:active, #homeButton:active, #submitButton:active {
+    transform: rotate(-1deg);
+    cursor: grabbing;
+    border: 1px inset var(--blue);
+  } 
+
+  #reserve, #waiting {
+      height: 500px;
+      overflow-y: scroll;
+  }
+
+  #userInput {
+    height: 500px;
+  }
+
+  /*Forms reservation*/
+  h4 {
+    margin: 1% auto .5% auto;
+    color: var(--dkGrey);
+  }
+
+  .form-group {
+    /*display:inline-block;*/
+    margin: 1%;
+  }
+  
+  .formInput {
+    border-left:45vw;
+    border-right:45vw;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  .formInput:hover {
+      border-color: var(--green);
+  }
+
+/*Footer*/
+    .apis {
+        text-align: center;
+        margin: .2% 15% auto 15%;
+        background-color: var(--lightgrey);
+        background-size: cover;
+        padding: 2%;
+        border-radius: 20px 5px 3px 5px;
+        height: 100px;
+        opacity: 90%;
+        box-shadow: 5px;   
+  }
+
+    #apiLinks1, #apiLinks2 {
+        font-weight: 500;
+        color: var(--dkGrey);
+    }
+
+    #apiLinks1:hover, #apiLinks2:hover {
+        font-weight: 650;
+        cursor: pointer;
+    }
+
+    #apiLinks1:active, #apiLinks2:active {
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: grabbing;
+    }
+
+@media (max-width: 1500px) {#viewButton, #bookButton, #homeButton, #submitButton {
+    display: block !important;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 1500px) {.container {
+    height: fit-content;
+}
+}
+

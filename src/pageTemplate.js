@@ -40,8 +40,8 @@ let generateTeam = teamArr => {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teamXtra</title>
-    <link rel="stylesheet" href="./assets/css/jass.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <section class="container"
