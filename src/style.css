@@ -43,7 +43,7 @@
   }
 
 /*Header*/
-  header, .container {
+  header {
     text-align: center;
     margin: 2% 15% auto 15%;
     background-color: var(--lightgrey);
@@ -62,115 +62,43 @@
   }
 
   /*body*/
-  .container {
+  .card {
       height: 400px;
-      margin-top: .2%;
+      width: 15%;
+      margin: 2% 5% auto 5%;;
+      background-color: var(--white);
+      background-size: cover;
+      padding: 1%;
+      border-radius: 5px;
+      box-shadow: 5px;
+      height: 150px;
+      position:absolute;
   }
-
-  #subHead {
-      font-size: 25px;
-      margin: 1% auto 10% auto;
-  }
-
-  #resHead {
-    font-size: 25px;
-    margin: 1% auto 1% auto;
-  }
-  
-  #links {
-    text-align: center;
-    margin: .2% 15% auto 15%;
-    background-color: var(--lightgrey);
-    background-size: cover;
-    padding: 2%;
+  .container {
     border-radius: 20px 5px 3px 5px;
-    height: 200px;
+    height: 400px;
     opacity: 90%;
-    box-shadow: 5px;   
+    box-shadow: 5px;
+    background-color: var(--lightgrey);   
+    margin: .2% 15% auto 15%;
   }
 
-  #viewButton, #bookButton, #homeButton, #submitButton {
+  .id {
+      position:absolute;
+      margin-left: 50%;
+      margin-right: auto;
+      color: var(--green);
+  }
 
-    display: inline;
-    border-radius: 5px 20px 5px 8px;
-    border: 1px solid var(--blue);
-    margin: 5% auto auto 2%;
-    padding: 1%;
+  .cardBody {
+    border-radius: 5px;
+    height: 50px;
     background-color: var(--dkGrey);
     color: var(--white);
+    padding: 2%;
+    margin-bottom: 2%;
   }
 
-  #viewButton:hover, #bookButton:hover, #homeButton:hover, #submitButton:hover {
-    transform: rotate(-1deg);
-    cursor: pointer;
-    border: 1px outset var(--green);
-  }
-
-  #viewButton:active, #bookButton:active, #homeButton:active, #submitButton:active {
-    transform: rotate(-1deg);
-    cursor: grabbing;
-    border: 1px inset var(--blue);
-  } 
-
-  #reserve, #waiting {
-      height: 500px;
-      overflow-y: scroll;
-  }
-
-  #userInput {
-    height: 500px;
-  }
-
-  /*Forms reservation*/
-  h4 {
-    margin: 1% auto .5% auto;
-    color: var(--dkGrey);
-  }
-
-  .form-group {
-    /*display:inline-block;*/
-    margin: 1%;
-  }
-  
-  .formInput {
-    border-left:45vw;
-    border-right:45vw;
-    padding: 3px;
-    border-radius: 5px;
-  }
-
-  .formInput:hover {
-      border-color: var(--green);
-  }
-
-/*Footer*/
-    .apis {
-        text-align: center;
-        margin: .2% 15% auto 15%;
-        background-color: var(--lightgrey);
-        background-size: cover;
-        padding: 2%;
-        border-radius: 20px 5px 3px 5px;
-        height: 100px;
-        opacity: 90%;
-        box-shadow: 5px;   
-  }
-
-    #apiLinks1, #apiLinks2 {
-        font-weight: 500;
-        color: var(--dkGrey);
-    }
-
-    #apiLinks1:hover, #apiLinks2:hover {
-        font-weight: 650;
-        cursor: pointer;
-    }
-
-    #apiLinks1:active, #apiLinks2:active {
-        font-weight: 500;
-        text-decoration: underline;
-        cursor: grabbing;
-    }
 
 @media (max-width: 1500px) {#viewButton, #bookButton, #homeButton, #submitButton {
     display: block !important;

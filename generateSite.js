@@ -1,15 +1,17 @@
 const fs = require('fs');
 
 
+function writeFile(html){
+    fs.writeFile('./dist/index.html', html, function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+        fs.copyFile()
+      });
 
-fs.writeFile('./dist/index.html', html, function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-    fs.copyFile()
-  });
+}
 
 const copyFile = () => {
-    fs.copyFile('.assets/css/style.css', './distro/style.css', err => {
+    fs.copyFile('.src/style.css', './distro/style.css', err => {
         if (err) {
             console.log(err);
         }
@@ -18,4 +20,4 @@ const copyFile = () => {
     });
 }
 
-module.exports = writeSite, copyFile
+module.exports = writeFile, copyFile

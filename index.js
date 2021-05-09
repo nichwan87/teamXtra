@@ -12,15 +12,15 @@ const {
 const Employee = require('./userLib/employee.js');
 const Casual = require('./userLib/casual.js');
 const Engineer = require('./userLib/engineer.js');
-const Executive = require('./userLib/executive.js');
+const Executive = require('./userLib/executives.js');
 const Intern = require('./userLib/intern.js');
 const Manager = require('./userLib/manager.js');
 const Officer = require('./userLib/officer.js');
 const Operations = require('./userLib/operations.js');
 
 //defining page generators
-const generateHTML = require('./src/pageTemplate.js');
-const writePage = require('./generateSite.js')
+const generateTeam = require('./src/pageTemplate.js');
+const writeFile = require('./generateSite.js')
 
 //team array
 const team = [];
@@ -77,7 +77,7 @@ function getDets() {
 //defining by role
 .then(answers => {
     if(answers.role === 'Casual') {
-        inquirer.prompt([{
+        inquirer.prompt([
             {
                 type: 'input',
                 name: 'gitHub',
@@ -91,14 +91,15 @@ function getDets() {
                     }
                     }
                 },
-        }])
+        ])
         .then(answer => {
+            console.log(answer.github)
             const someCasual = new Casual(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
             team.push(someCasual);
             addMore()
         })
     }else if(answers.role === 'Engineer') {
-        inquirer.prompt([{
+        inquirer.prompt([
             {
                 type: 'input',
                 name: 'gitHub',
@@ -112,14 +113,15 @@ function getDets() {
                     }
                     }
                 },
-        }])
+        ])
         .then(answer => {
+            console.log(answer.github)
             const someEngineer = new Engineer(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
             team.push(someEngineer);
             addMore()
         })
     }else if(answers.role === 'Executive') {
-            inquirer.prompt([{
+            inquirer.prompt([
                 {
                     type: 'input',
                     name: 'gitHub',
@@ -133,14 +135,15 @@ function getDets() {
                         }
                         }
                     },
-            }])
+            ])
             .then(answer => {
+                console.log(answer.github)
                 const someExecutive = new Executive(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
                 team.push(someExecutive);
                 addMore()
             })
         }else if(answers.role === 'Intern') {
-            inquirer.prompt([{
+            inquirer.prompt([
                 {
                     type: 'input',
                     name: 'gitHub',
@@ -154,14 +157,15 @@ function getDets() {
                         }
                         }
                     },
-            }])
+            ])
             .then(answer => {
+                console.log(answer.github)
                 const someIntern = new Intern(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
                 team.push(someIntern);
                 addMore()
             })
         }else if(answers.role === 'Manager') {
-            inquirer.prompt([{
+            inquirer.prompt([
                 {
                     type: 'input',
                     name: 'gitHub',
@@ -175,14 +179,15 @@ function getDets() {
                         }
                         }
                     },
-            }])
+            ])
             .then(answer => {
+                console.log(answer.github)
                 const someManager = new Manager(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
                 team.push(someManager);
                 addMore()
             })
         }else if(answers.role === 'Officer') {
-            inquirer.prompt([{
+            inquirer.prompt([
                 {
                     type: 'input',
                     name: 'gitHub',
@@ -196,14 +201,16 @@ function getDets() {
                         }
                         }
                     },
-            }])
+            ])
             .then(answer => {
+                console.log(answer.github)
+                
                 const someOfficer = new Officer(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
                 team.push(someOfficer);
                 addMore()
             })
         }else if(answers.role === 'Operations') {
-            inquirer.prompt([{
+            inquirer.prompt([
                 {
                     type: 'input',
                     name: 'gitHub',
@@ -217,8 +224,9 @@ function getDets() {
                         }
                         }
                     },
-            }])
+            ])
             .then(answer => {
+                console.log(answer.github)
                 const someOperations = new Operations(answers.id, answers.name, answers.email, answers.role, answers.gitHub)
                 team.push(someOperations);
                 addMore()
@@ -239,8 +247,8 @@ function getDets() {
                 getInfo(team)
             }
             else {
-                let theCardHTML = generatePage(team)
-                writeHTML(theCardHTML)
+                let theCardHTML = generateTeam(team)
+                writeFile(theCardHTML)
             }
         })
 
@@ -248,3 +256,5 @@ function getDets() {
 })
 
 }
+
+getDets();
