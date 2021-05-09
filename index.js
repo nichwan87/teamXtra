@@ -244,7 +244,9 @@ function getDets() {
             }])
         .then(res => {
             if(res.addNew === true){
-                getInfo(team)
+                let theCardHTML = generateTeam(team)
+                writeFile(theCardHTML)
+                getDets(team)
             }
             else {
                 let theCardHTML = generateTeam(team)

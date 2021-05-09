@@ -11,7 +11,7 @@ function writeFile(html){
 }
 
 const copyFile = () => {
-    fs.copyFile('.src/style.css', './distro/style.css', err => {
+    fs.copyFile('./src/style.css', './distro/style.css', err => {
         if (err) {
             console.log(err);
         }
