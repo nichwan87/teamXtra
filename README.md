@@ -7,7 +7,7 @@ A screenshot of the released application can be found here [website](.\src\Relea
 
 ## Usage
 
-Find the release at [website](https://nichwan87.github.io/teamXtra//)
+Find the release at [website](https://nichwan87.github.io/teamXtra/)
 
 Intended usage is for a simple team profile to be added and viewed.
 
